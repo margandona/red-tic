@@ -1,0 +1,130 @@
+/**
+ * Progress Bar Component CSS
+ */
+
+.progress {
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-gray-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+}
+
+.progress__bar {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow) ease-in-out;
+  position: relative;
+}
+
+.progress__bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.progress__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-sm);
+}
+
+.progress__text {
+  font-weight: var(--font-weight-semibold);
+}
+
+.progress__percentage {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: var(--font-weight-bold);
+}
+
+/* Variantes */
+.progress--small {
+  height: 4px;
+}
+
+.progress--large {
+  height: 12px;
+}
+
+.progress--success .progress__bar {
+  background: linear-gradient(135deg, #00d084 0%, #00b86c 100%);
+}
+
+.progress--warning .progress__bar {
+  background: linear-gradient(135deg, #ffc400 0%, #ff9800 100%);
+}
+
+.progress--danger .progress__bar {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
+}
+
+/* Circular Progress */
+.progress-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--color-primary) 0deg,
+    var(--color-primary) var(--progress-angle, 0deg),
+    var(--color-gray-200) var(--progress-angle, 0deg),
+    var(--color-gray-200) 360deg
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.progress-circle::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+
+.progress-circle__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.progress-circle__percentage {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.progress-circle__label {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-600);
+}

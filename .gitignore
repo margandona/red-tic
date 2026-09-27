@@ -1,0 +1,38 @@
+# Dependencies and build artifacts
+node_modules/
+dist/
+build/
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*
+!.env.example
+
+# Secrets and credentials
+**/*adminsdk*.json
+**/*service-account*.json
+**/*serviceAccount*.json
+**/*credentials*.json
+**/*private-key*.json
+
+# Testing
+coverage/
+.nyc_output/
+
+# Browser
+*.min.js
+*.min.css

@@ -1,0 +1,134 @@
+/**
+ * Cards Component CSS
+ */
+
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-base);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card--clickable {
+  cursor: pointer;
+}
+
+.card--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.card__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-2xl);
+  flex-shrink: 0;
+}
+
+.card__icon--primary {
+  background: rgba(249, 5, 152, 0.1);
+  color: var(--color-primary);
+}
+
+.card__icon--secondary {
+  background: rgba(240, 44, 125, 0.1);
+  color: var(--color-secondary);
+}
+
+.card__icon--accent {
+  background: rgba(236, 88, 82, 0.1);
+  color: var(--color-accent);
+}
+
+.card__icon--info {
+  background: rgba(0, 217, 255, 0.1);
+  color: var(--color-info);
+}
+
+.card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin: 0;
+}
+
+.card__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin: var(--spacing-xs) 0 0 0;
+}
+
+.card__badge {
+  margin-left: auto;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+  padding: 4px 8px;
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.card__content {
+  margin-bottom: var(--spacing-md);
+}
+
+.card__description {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  line-height: var(--line-height-relaxed);
+}
+
+.card__footer {
+  display: flex;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.card__meta {
+  display: flex;
+  gap: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+}
+
+.card__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+/* Variantes */
+.card--featured {
+  border: 2px solid var(--color-primary);
+  background: linear-gradient(
+    135deg,
+    rgba(249, 5, 152, 0.05) 0%,
+    rgba(255, 77, 184, 0.05) 100%
+  );
+}
+
+.card--completed {
+  opacity: 0.8;
+  background-color: var(--color-gray-100);
+}

@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "aula-educativa"
+  },
+  "targets": {
+    "aula-educativa": {
+      "hosting": {
+        "ayudantia-tic": [
+          "ayudantia-tic"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

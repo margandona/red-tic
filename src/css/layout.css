@@ -1,0 +1,103 @@
+/**
+ * App Layout CSS
+ * Estructura general de la aplicación
+ */
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  flex: 1;
+  min-height: calc(100vh - 64px);
+}
+
+#sidebar-container {
+  flex-shrink: 0;
+  width: 250px;
+  overflow-y: auto;
+  background-color: var(--color-white);
+  border-right: 1px solid var(--color-gray-200);
+}
+
+#app {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-lg);
+  background-color: var(--color-light);
+}
+
+body.landing-mode #navbar-container,
+body.landing-mode #sidebar-container {
+  display: none;
+}
+
+body.landing-mode .app-layout {
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+body.landing-mode #app {
+  padding: 0;
+}
+
+/* 404 Error */
+.error-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  font-size: var(--font-size-2xl);
+  color: var(--color-gray-600);
+  text-align: center;
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-2xl);
+}
+
+.loading::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-primary);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .app-layout {
+    display: block;
+    min-height: auto;
+  }
+
+  #sidebar-container {
+    width: 0;
+    border: none;
+    overflow: visible;
+  }
+
+  #app {
+    padding: var(--spacing-md);
+    min-height: calc(100vh - 64px);
+  }
+}
+
+@media (max-width: 480px) {
+  #app {
+    padding: var(--spacing-sm);
+  }
+
+  .navbar {
+    padding: var(--spacing-sm);
+  }
+
+  .navbar__progress-mini {
+    display: none;
+  }
+}

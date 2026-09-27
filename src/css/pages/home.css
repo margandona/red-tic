@@ -1,0 +1,126 @@
+/**
+ * Home Page CSS
+ */
+
+.home-view {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-hero {
+  text-align: center;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-lg);
+}
+
+.home-hero h1 {
+  margin-bottom: var(--spacing-md);
+}
+
+.home-hero p {
+  font-size: var(--font-size-lg);
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+.home-career-badge {
+  margin-top: var(--spacing-lg);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-base);
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.home-career-badge__label {
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+
+.home-career-badge__name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.home-progress {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.home-progress h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+#progress-container {
+  margin-bottom: var(--spacing-xl);
+}
+
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.stat {
+  background-color: var(--color-white);
+  border-radius: var(--radius-base);
+  padding: var(--spacing-md);
+  border-left: 4px solid var(--color-primary);
+}
+
+.stat__label {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat__value {
+  display: block;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-clases h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.clases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.progress-wrapper {
+  margin: var(--spacing-md) 0;
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding: var(--spacing-lg);
+  }
+
+  .home-hero h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .progress-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .clases-grid {
+    grid-template-columns: 1fr;
+  }
+}

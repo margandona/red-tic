@@ -1,0 +1,373 @@
+/**
+ * Leaderboard Page Styles
+ */
+
+.leaderboard-view {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+  min-height: 100vh;
+}
+
+/* Header */
+.leaderboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: slideDown 0.4s ease-out;
+}
+
+.leaderboard-header h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.leaderboard-header p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+/* Section */
+.leaderboard-section {
+  margin-bottom: 30px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Tu Posición */
+.tu-posicion {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.tu-posicion:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tu-posicion--ranked {
+  background: linear-gradient(135deg, rgba(249, 5, 152, 0.05) 0%, rgba(0, 217, 255, 0.05) 100%);
+  border-left: 4px solid var(--color-primary);
+}
+
+.tu-posicion__icon {
+  font-size: 2.5rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.tu-posicion__info {
+  flex: 1;
+}
+
+.tu-posicion__label {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tu-posicion__rank {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-top: 4px;
+}
+
+.tu-posicion__points {
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.tu-posicion__cta {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-align: right;
+  padding: 12px;
+  background: rgba(0, 217, 255, 0.1);
+  border-radius: 8px;
+  border-radius: 8px;
+}
+
+.tu-posicion__reward {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-success);
+  text-align: right;
+}
+
+/* Tabla Leaderboard */
+.leaderboard-table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.ranking-header {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.ranking-header .ranking-cell {
+  padding: 16px 12px;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.ranking-row {
+  border-bottom: 1px solid var(--color-border-light);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.ranking-row:hover {
+  background-color: rgba(249, 5, 152, 0.02);
+}
+
+.ranking-row:last-child {
+  border-bottom: none;
+}
+
+.ranking-row--medal-1 {
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+.ranking-row--medal-2 {
+  background-color: rgba(192, 192, 192, 0.1);
+}
+
+.ranking-row--medal-3 {
+  background-color: rgba(205, 127, 50, 0.1);
+}
+
+.ranking-cell {
+  padding: 16px 12px;
+  vertical-align: middle;
+}
+
+.ranking-cell__posicion {
+  min-width: 100px;
+}
+
+.ranking-cell__usuario {
+  min-width: 250px;
+}
+
+.ranking-cell__progreso {
+  min-width: 150px;
+}
+
+.ranking-cell__puntos {
+  min-width: 100px;
+  text-align: right;
+}
+
+/* Posición */
+.ranking-posicion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ranking-medalla {
+  font-size: 1.5rem;
+}
+
+.ranking-numero {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--color-text-secondary);
+}
+
+/* Usuario */
+.ranking-usuario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ranking-avatar {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.ranking-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ranking-nombre {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ranking-meta {
+  font-size: 0.813rem;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+/* Progreso */
+.ranking-progreso-bar {
+  height: 8px;
+  background-color: var(--color-border-light);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ranking-progreso-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  transition: width 0.4s ease;
+  border-radius: 4px;
+}
+
+/* Puntos */
+.ranking-puntos {
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.ranking-puntos-label {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-left: 4px;
+  font-weight: 500;
+}
+
+/* Footer */
+.leaderboard-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Animaciones */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .leaderboard-view {
+    padding: 20px 15px;
+  }
+
+  .leaderboard-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .tu-posicion {
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+  }
+
+  .tu-posicion__cta,
+  .tu-posicion__reward {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .ranking-cell {
+    padding: 12px 8px;
+    font-size: 0.875rem;
+  }
+
+  .ranking-cell__usuario {
+    min-width: 200px;
+  }
+
+  .ranking-cell__progreso {
+    display: none;
+  }
+
+  .ranking-header .ranking-cell {
+    padding: 12px 8px;
+    font-size: 0.75rem;
+  }
+
+  .ranking-medalla {
+    font-size: 1.25rem;
+  }
+
+  .ranking-avatar {
+    font-size: 1.5rem;
+  }
+
+  .ranking-nombre {
+    font-size: 0.875rem;
+  }
+
+  .ranking-meta {
+    font-size: 0.75rem;
+  }
+
+  .ranking-puntos {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leaderboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .tu-posicion {
+    padding: 16px;
+  }
+
+  .ranking-cell {
+    padding: 10px 6px;
+  }
+
+  .ranking-header .ranking-cell {
+    padding: 10px 6px;
+  }
+
+  .ranking-cell__posicion,
+  .ranking-cell__puntos {
+    min-width: auto;
+  }
+}

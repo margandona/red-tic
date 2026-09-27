@@ -1,0 +1,31 @@
+{
+  "name": "sistema-academico-gamificado",
+  "version": "1.0.0",
+  "description": "Sistema académico gamificado con HTML5, CSS3 y JavaScript vanilla",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "lint": "eslint src/js/**/*.js",
+    "lint:fix": "eslint src/js/**/*.js --fix",
+    "security:scan": "node scripts/scan-secrets.js",
+    "security:check": "npm run security:scan"
+  },
+  "keywords": [
+    "educacion",
+    "gamificacion",
+    "academia",
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usuario/proyecto.git"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}

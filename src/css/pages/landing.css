@@ -1,0 +1,102 @@
+/**
+ * Landing Page CSS (desktop portada)
+ */
+
+.landing-view {
+  position: relative;
+  min-height: calc(100vh - 64px);
+  border-radius: 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.landing-view__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../../assets/images/portada.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(10%);
+  transform: scale(1.02);
+}
+
+.landing-view__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(0, 79, 68, 0.78) 0%, rgba(0, 79, 68, 0.45) 35%, rgba(255, 255, 255, 0.05) 70%),
+    linear-gradient(8deg, rgba(30, 92, 79, 0.66) 0%, rgba(30, 92, 79, 0.16) 42%, rgba(255, 255, 255, 0) 80%);
+}
+
+.landing-view__content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin: 0;
+  min-height: calc(100vh - 64px);
+  padding: clamp(2rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-white);
+}
+
+.landing-view__logo {
+  width: min(380px, 84%);
+  height: auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0.8rem;
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.landing-view__eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: var(--font-size-xs);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-gray-200);
+}
+
+.landing-view__content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--spacing-md);
+}
+
+.landing-view__content p {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-xl);
+  max-width: 55ch;
+}
+
+.landing-view__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.landing-view__actions .btn {
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 991px) {
+  .landing-view {
+    min-height: auto;
+  }
+
+  .landing-view__content {
+    min-height: auto;
+    max-width: 100%;
+    padding: var(--spacing-lg);
+  }
+
+  .landing-view__actions {
+    width: 100%;
+  }
+
+  .landing-view__actions .btn {
+    width: 100%;
+  }
+}
